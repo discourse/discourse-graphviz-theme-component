@@ -8,7 +8,7 @@ Can be used in posts or chat messages:
 
 ````
 ```graphviz engine=neato
-grap {
+graph {
   a -- b;
 }
 ```
