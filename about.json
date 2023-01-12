@@ -1,0 +1,10 @@
+{
+  "about_url": null,
+  "license_url": null,
+  "assets": {
+    "graphviz": "assets/graphviz.umd.js",
+    "graphviz_worker": "assets/graphviz_worker.js"
+  },
+  "name": "discourse-graphviz-theme-component",
+  "component": true
+}

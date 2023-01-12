@@ -1,0 +1,17 @@
+.chat-message-text,
+.d-editor-preview,
+.cooked {
+  pre[data-code-wrap="graphviz"] {
+    white-space: unset;
+    overflow-y: auto;
+
+    > svg {
+      vertical-align: top;
+    }
+
+    &:not([data-processed="true"]) {
+      // prevents text flashing while loading
+      font-size: 0;
+    }
+  }
+}

@@ -1,0 +1,4 @@
+svg_icons:
+  default: "project-diagram"
+  type: "list"
+  list_type: "compact"

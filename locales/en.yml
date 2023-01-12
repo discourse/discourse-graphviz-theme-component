@@ -1,0 +1,4 @@
+en:
+  theme_metadata:
+    description: "A theme component to use Graphviz"
+  insert_graphviz_sample: "Graphviz diagram"
