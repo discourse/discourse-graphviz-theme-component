@@ -142,15 +142,7 @@ function updateMarkdownHeight(graphviz, index) {
   }
 }
 
-export default apiInitializer("0.11.1", (api) => {
-  api.addToolbarPopupMenuOptionsCallback(() => {
-    return {
-      action: "insertGraphvizSample",
-      icon: "project-diagram",
-      label: themePrefix("insert_graphviz_sample"),
-    };
-  });
-
+export default apiInitializer("1.15.0", (api) => {
   // this is a hack as applySurround expects a top level
   // composer key, not possible from a theme
   window.I18n.translations[
@@ -159,17 +151,16 @@ export default apiInitializer("0.11.1", (api) => {
   a -- b;
 }`;
 
-  api.modifyClass("controller:composer", {
-    pluginId: "discourse-graphviz",
-    actions: {
-      insertGraphvizSample() {
-        this.toolbarEvent.applySurround(
-          "\n```graphviz engine=dot\n",
-          "\n```\n",
-          "graphviz_sample",
-          { multiline: false }
-        );
-      },
+  api.addComposerToolbarPopupMenuOption({
+    icon: "project-diagram",
+    label: themePrefix("insert_graphviz_sample"),
+    action: (toolbarEvent) => {
+      toolbarEvent.applySurround(
+        "\n```graphviz engine=dot\n",
+        "\n```\n",
+        "graphviz_sample",
+        { multiline: false }
+      );
     },
   });
 
