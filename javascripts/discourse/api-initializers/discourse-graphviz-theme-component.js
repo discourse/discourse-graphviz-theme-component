@@ -1,6 +1,6 @@
-import { apiInitializer } from "discourse/lib/api";
 import { cancel, later } from "@ember/runloop";
 import { Promise } from "rsvp";
+import { apiInitializer } from "discourse/lib/api";
 
 const webWorkerUrl = settings.theme_uploads_local.graphviz_worker;
 let webWorker;
