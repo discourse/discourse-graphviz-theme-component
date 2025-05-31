@@ -1,3 +1,5 @@
+/* eslint-disable */
+// prettier-ignore
 !(function (r, t) {
   "object" == typeof exports && "undefined" != typeof module
     ? t(exports)
