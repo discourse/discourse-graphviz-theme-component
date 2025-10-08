@@ -142,7 +142,7 @@ function updateMarkdownHeight(graphviz, index) {
   }
 }
 
-export default apiInitializer("1.13.0", (api) => {
+export default apiInitializer((api) => {
   // this is a hack as applySurround expects a top level
   // composer key, not possible from a theme
   window.I18n.translations[window.I18n.locale].js.composer.graphviz_sample =
